@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ca" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Arnau Garcia Milan — Graduat en DAW, Frontend Developer i Backend Learner de Mataró. Portfoli personal." />
+  <meta name="keywords" content="Arnau Garcia Milan, DAW, Frontend Developer, Mataró, Escola Pia, portfoli" />
+  <meta property="og:title" content="Arnau Garcia Milan · Developer" />
+  <meta property="og:description" content="Graduat DAW · Frontend Developer · Backend Learner" />
+  <meta property="og:type" content="website" />
+  <title>Arnau Garcia Milan · Developer</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <span class="preloader-letter">A</span>
+      <span class="preloader-letter">G</span>
+      <span class="preloader-letter">M</span>
+    </div>
+  </div>
+
+  <!-- Back to top -->
+  <button id="back-to-top" aria-label="Tornar al principi">↑</button>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">AGM<span class="accent">.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">Sobre mi</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projectes</a></li>
+        <li><a href="#timeline" class="nav-link">Trajectòria</a></li>
+        <li><a href="#contact" class="nav-link">Contacte</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="theme-toggle" aria-label="Canviar tema">
+          <span class="theme-icon">◐</span>
+        </button>
+        <button class="nav-menu-btn" id="menu-toggle" aria-label="Menú">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="nav-mobile" id="mobile-menu">
+      <a href="#about" class="nav-mobile-link">Sobre mi</a>
+      <a href="#skills" class="nav-mobile-link">Skills</a>
+      <a href="#projects" class="nav-mobile-link">Projectes</a>
+      <a href="#timeline" class="nav-mobile-link">Trajectòria</a>
+      <a href="#contact" class="nav-mobile-link">Contacte</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-noise"></div>
+    <div class="hero-content">
+      <div class="hero-badge reveal-up">Disponible per a oportunitats ✦</div>
+      <h1 class="hero-title reveal-up">
+        <span class="hero-name-line">Arnau</span>
+        <span class="hero-name-line delay-1">Garcia Milan</span>
+      </h1>
+      <p class="hero-subtitle reveal-up delay-2">
+        <span id="typing-text"></span><span class="typing-cursor">|</span>
+      </p>
+      <div class="hero-cta reveal-up delay-3">
+        <a href="#projects" class="btn btn-primary">Veure projectes</a>
+        <a href="#contact" class="btn btn-ghost">Contacte</a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+    <div class="hero-blob blob-1"></div>
+    <div class="hero-blob blob-2"></div>
+    <div class="hero-blob blob-3"></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-label reveal-up">// sobre mi</div>
+      <div class="about-grid">
+        <div class="about-text reveal-up">
+          <h2 class="section-title">Creo experiències<br/><em>digitals</em> que importen.</h2>
+          <p class="about-description">
+            Tinc 19 anys i soc graduat en Desenvolupament d'Aplicacions Web a l'Escola Pia de Mataró. M'apassiona construir productes digitals nets, funcionals i amb cura pels detalls — des del frontend fins al backend.
+          </p>
+          <p class="about-description">
+            Sempre aprenent, sempre construint. El meu objectiu és créixer com a developer full-stack i contribuir a projectes que tinguin un impacte real.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-number">19</span>
+              <span class="stat-label">Anys</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">DAW</span>
+              <span class="stat-label">Graduat</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">∞</span>
+              <span class="stat-label">Curiositat</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-card-wrap reveal-up delay-1">
+          <div class="about-card">
+            <div class="about-avatar">
+              <div class="avatar-placeholder">AG</div>
+              <div class="avatar-ring"></div>
+            </div>
+            <div class="about-chips">
+              <span class="chip">🎓 Escola Pia Mataró</span>
+              <span class="chip">📍 Mataró, Catalunya</span>
+              <span class="chip">💻 Full-Stack Learner</span>
+              <span class="chip">⚡ Spring Boot</span>
+              <span class="chip">🅰️ Angular</span>
+              <span class="chip">🎨 UI Enthusiast</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-label reveal-up">// habilitats</div>
+      <h2 class="section-title reveal-up">Stack &amp; eines</h2>
+      <div class="skills-grid reveal-up delay-1">
+
+        <div class="skill-card">
+          <div class="skill-icon">🌐</div>
+          <span class="skill-name">HTML5</span>
+          <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🎨</div>
+          <span class="skill-name">CSS3 / SCSS</span>
+          <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">⚡</div>
+          <span class="skill-name">JavaScript</span>
+          <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🅰️</div>
+          <span class="skill-name">Angular</span>
+          <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">☕</div>
+          <span class="skill-name">Java</span>
+          <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🍃</div>
+          <span class="skill-name">Spring Boot</span>
+          <div class="skill-bar"><div class="skill-fill" data-width="62"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🐘</div>
+          <span class="skill-name">PostgreSQL / MySQL</span>
+          <div class="skill-bar"><div class="skill-fill" data-width="68"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🐙</div>
+          <span class="skill-name">Git / GitHub</span>
+          <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🐳</div>
+          <span class="skill-name">Docker</span>
+          <div class="skill-bar"><div class="skill-fill" data-width="55"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🔐</div>
+          <span class="skill-name">JWT / Spring Security</span>
+          <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-label reveal-up">// projectes</div>
+      <h2 class="section-title reveal-up">Coses que he<br/><em>construït</em></h2>
+
+      <div class="project-filters reveal-up delay-1">
+        <button class="filter-btn active" data-filter="all">Tot</button>
+        <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+        <button class="filter-btn" data-filter="frontend">Frontend</button>
+        <button class="filter-btn" data-filter="backend">Backend</button>
+      </div>
+
+      <div class="projects-grid reveal-up delay-2">
+
+        <!-- TaskFlow -->
+        <article class="project-card" data-tags="fullstack backend frontend" data-project="taskflow">
+          <div class="project-img">
+            <div class="project-img-placeholder taskflow-bg">
+              <span class="project-img-icon">⚡</span>
+            </div>
+            <div class="project-overlay">
+              <button class="project-detail-btn">Veure detalls</button>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">Spring Boot</span>
+              <span class="tag">Angular</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">JWT</span>
+              <span class="tag">Docker</span>
+            </div>
+            <h3 class="project-title">TaskFlow</h3>
+            <p class="project-desc">Gestor de tasques estil Trello amb autenticació JWT, CRUD complet i tauler Kanban. Arquitectura fullstack professional desplegada a Render + Vercel.</p>
+            <div class="project-links">
+              <a href="https://taskflow-frontend-plum.vercel.app/" target="_blank" rel="noopener" class="project-link primary">Demo →</a>
+              <a href="https://github.com/arnaugarciamilan/taskflow" target="_blank" rel="noopener" class="project-link">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Projecte 2 placeholder -->
+        <article class="project-card" data-tags="frontend" data-project="proj2">
+          <div class="project-img">
+            <div class="project-img-placeholder proj2-bg">
+              <span class="project-img-icon">🎨</span>
+            </div>
+            <div class="project-overlay">
+              <button class="project-detail-btn">Veure detalls</button>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <h3 class="project-title">Projecte Frontend</h3>
+            <p class="project-desc">Projecte d'interfície d'usuari amb animacions avançades, disseny responsive i interaccions fluides. Proximament disponible.</p>
+            <div class="project-links">
+              <span class="project-link disabled">Pròximament</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Projecte 3 placeholder -->
+        <article class="project-card" data-tags="backend" data-project="proj3">
+          <div class="project-img">
+            <div class="project-img-placeholder proj3-bg">
+              <span class="project-img-icon">🔧</span>
+            </div>
+            <div class="project-overlay">
+              <button class="project-detail-btn">Veure detalls</button>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">Java</span>
+              <span class="tag">Spring Boot</span>
+              <span class="tag">REST API</span>
+            </div>
+            <h3 class="project-title">API REST</h3>
+            <p class="project-desc">API RESTful amb Spring Boot, seguretat amb Spring Security i base de dades relacional. En desenvolupament actiu.</p>
+            <div class="project-links">
+              <span class="project-link disabled">En curs</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT MODAL -->
+  <div id="project-modal" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close">✕</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <!-- TIMELINE -->
+  <section id="timeline">
+    <div class="container">
+      <div class="section-label reveal-up">// trajectòria</div>
+      <h2 class="section-title reveal-up">El meu camí</h2>
+      <div class="timeline">
+
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot active"></div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Grau Superior en Desenvolupament Web d'Aplicacions</h3>
+            <span class="timeline-date-row">
+              <span class="timeline-school">Escola Pia Mataró</span>
+              <span class="timeline-badge active">Cursant actualmente</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Grau Mitjà en Sistemes Microinformàtics i Xarxes</h3>
+            <span class="timeline-date-row">
+              <span class="timeline-school">Escola Pia Mataró</span>
+              <span class="timeline-date">2022 — 2024</span>
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-label reveal-up">// contacte</div>
+      <h2 class="section-title reveal-up">Parlem<em>.</em></h2>
+      <p class="contact-intro reveal-up delay-1">Estic obert a oportunitats, col·laboracions o simplement una bona conversa sobre tecnologia.</p>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal-up delay-1">
+          <div class="contact-email-wrap">
+            <span class="contact-email-label">Email</span>
+            <button class="contact-email-btn" id="copy-email" data-email="arnaugarciamilan@gmail.com">
+              arnaugarciamilan@gmail.com
+              <span class="copy-icon">⎘</span>
+            </button>
+            <span class="copied-msg" id="copied-msg">Copiat!</span>
+          </div>
+          <div class="contact-socials">
+            <a href="https://github.com/arnaugarciamilan" target="_blank" rel="noopener" class="social-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/arnau-garc%C3%ADa-mil%C3%A1n-5133342a2/" target="_blank" rel="noopener" class="social-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal-up delay-2" id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="form-name">Nom</label>
+            <input type="text" id="form-name" name="name" placeholder="El teu nom" required />
+            <span class="form-error" id="name-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="form-email">Email</label>
+            <input type="email" id="form-email" name="email" placeholder="el.teu@email.com" required />
+            <span class="form-error" id="email-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="form-message">Missatge</label>
+            <textarea id="form-message" name="message" rows="4" placeholder="En què et puc ajudar?" required></textarea>
+            <span class="form-error" id="message-error"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Enviar missatge ✦</button>
+          <div class="form-success" id="form-success">
+            ✓ Missatge rebut! Et respondré aviat.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">AGM<span class="accent">.</span></span>
+        <span class="footer-copy">© 2026 Arnau Garcia Milan</span>
+        <div class="footer-links">
+          <a href="#hero">Inici</a>
+          <a href="#projects">Projectes</a>
+          <a href="#contact">Contacte</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL DATA -->
+  <script type="application/json" id="project-data">
+  {
+    "taskflow": {
+      "title": "TaskFlow",
+      "subtitle": "Gestor de tasques fullstack estil Trello",
+      "description": "TaskFlow és una aplicació fullstack professional per gestionar projectes i tasques. Inspirada en Trello, ofereix un tauler Kanban intuïtiu amb autenticació segura, CRUD complet i una arquitectura en capes professional.",
+      "features": ["Autenticació JWT amb BCrypt", "Tauler Kanban amb 3 estats", "Filtres per prioritat i estat", "CRUD complet de projectes i tasques", "Arquitectura Spring Boot en capes", "Frontend Angular amb guards i interceptors", "Desplegament Docker + Render + Vercel"],
+      "stack": ["Spring Boot 3.2", "Angular 17", "PostgreSQL", "JWT", "Flyway", "Docker", "Render", "Vercel"],
+      "demo": "https://taskflow-frontend-plum.vercel.app/",
+      "github": "https://github.com/arnaugarciamilan/taskflow"
+    },
+    "proj2": {
+      "title": "Projecte Frontend",
+      "subtitle": "Interfície d'usuari avançada",
+      "description": "Projecte de frontend pur amb HTML, CSS i JavaScript vanilla. Animacions avançades, disseny responsive i interaccions fluides. En desenvolupament.",
+      "features": ["Disseny responsive mobile-first", "Animacions CSS avançades", "JavaScript vanilla modular"],
+      "stack": ["HTML5", "CSS3", "JavaScript"],
+      "demo": null,
+      "github": null
+    },
+    "proj3": {
+      "title": "API REST",
+      "subtitle": "Backend amb Spring Boot",
+      "description": "API RESTful construïda amb Spring Boot, seguretat amb Spring Security i base de dades relacional. En desenvolupament actiu.",
+      "features": ["Endpoints RESTful", "Spring Security", "Validacions i gestió d'errors"],
+      "stack": ["Java", "Spring Boot", "MySQL"],
+      "demo": null,
+      "github": null
+    }
+  }
+  </script>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
