@@ -89,11 +89,11 @@ window.addEventListener('load', () => {
 /* ─── TYPING EFFECT ──────────────────────────── */
 (function initTyping() {
   const phrases = [
-    'DAW Graduate ✦',
-    'Frontend Developer ✦',
-    'Backend Learner ✦',
-    'UI Enthusiast ✦',
-    'Full-Stack Builder ✦'
+    'Desenvolupador Web ✦',
+    'Full-Stack Developer ✦',
+    'Màster IA & Big Data ✦',
+    'Freelance Web Developer ✦',
+    'UI Enthusiast ✦'
   ];
   const el = document.getElementById('typing-text');
   let phraseIdx = 0, charIdx = 0, deleting = false;
@@ -258,7 +258,7 @@ function animateSkillBars() {
     const features = data.features.map(f => `<li>${f}</li>`).join('');
     const stack = data.stack.map(s => `<span class="tag">${s}</span>`).join('');
     const demoLink = data.demo
-      ? `<a href="${data.demo}" target="_blank" rel="noopener" class="modal-link primary">Demo en viu →</a>`
+      ? `<a href="${data.demo}" target="_blank" rel="noopener" class="modal-link primary">${data.demoLabel || 'Demo en viu →'}</a>`
       : `<span class="modal-link disabled">Demo pròximament</span>`;
     const githubLink = data.github
       ? `<a href="${data.github}" target="_blank" rel="noopener" class="modal-link secondary">GitHub</a>`
@@ -354,14 +354,39 @@ function animateSkillBars() {
       submitBtn.textContent = 'Enviant...';
       submitBtn.disabled = true;
 
-      // Simulació enviament
-      setTimeout(() => {
-        form.reset();
-        success.classList.add('visible');
-        submitBtn.textContent = 'Enviar missatge ✦';
-        submitBtn.disabled = false;
-        setTimeout(() => success.classList.remove('visible'), 4000);
-      }, 1200);
+      const fail = document.getElementById('form-fail');
+      fail.classList.remove('visible');
+
+      // Enviament real via FormSubmit (arriba a la bústia de correu)
+      fetch('https://formsubmit.co/ajax/arnaugarciamilan@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          name: nameEl.value.trim(),
+          email: emailEl.value.trim(),
+          message: msgEl.value.trim(),
+          _subject: `Nou missatge del portfolio — ${nameEl.value.trim()}`,
+          _replyto: emailEl.value.trim(),
+          _template: 'table',
+          _captcha: 'false',
+          _honey: form.querySelector('[name="_honey"]').value
+        })
+      })
+        .then(res => res.json().then(data => ({ ok: res.ok, data })))
+        .then(({ ok, data }) => {
+          if (!ok || data.success === 'false' || data.success === false) throw new Error(data.message || 'Error');
+          form.reset();
+          success.classList.add('visible');
+          setTimeout(() => success.classList.remove('visible'), 5000);
+        })
+        .catch(() => {
+          fail.classList.add('visible');
+          setTimeout(() => fail.classList.remove('visible'), 8000);
+        })
+        .finally(() => {
+          submitBtn.textContent = 'Enviar missatge ✦';
+          submitBtn.disabled = false;
+        });
     }
   });
 })();
